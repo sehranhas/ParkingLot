@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 07, 2016 at 09:25 AM
+-- Generation Time: Jul 07, 2016 at 10:47 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -59,26 +59,26 @@ CREATE TABLE IF NOT EXISTS `ParkingSpot` (
 --
 
 INSERT INTO `ParkingSpot` (`id`, `size`, `licensePlate`, `startTime`) VALUES
-(1, 0, NULL, NULL),
-(2, 0, NULL, NULL),
-(3, 1, NULL, NULL),
-(4, 1, NULL, NULL),
-(5, 1, NULL, NULL),
-(6, 1, NULL, NULL),
-(7, 1, NULL, NULL),
-(8, 1, NULL, NULL),
-(9, 1, NULL, NULL),
-(10, 1, NULL, NULL),
-(11, 1, NULL, NULL),
-(12, 2, NULL, NULL),
-(13, 2, NULL, NULL),
-(14, 2, NULL, NULL),
-(15, 2, NULL, NULL),
-(16, 2, NULL, NULL),
-(17, 2, NULL, NULL),
-(18, 2, NULL, NULL),
-(19, 3, NULL, NULL),
-(20, 3, NULL, NULL);
+(1, 1, NULL, NULL),
+(2, 1, NULL, NULL),
+(3, 2, NULL, NULL),
+(4, 2, NULL, NULL),
+(5, 2, NULL, NULL),
+(6, 2, NULL, NULL),
+(7, 2, NULL, NULL),
+(8, 2, NULL, NULL),
+(9, 2, NULL, NULL),
+(10, 2, NULL, NULL),
+(11, 2, NULL, NULL),
+(12, 3, NULL, NULL),
+(13, 3, NULL, NULL),
+(14, 3, NULL, NULL),
+(15, 3, NULL, NULL),
+(16, 3, NULL, NULL),
+(17, 3, NULL, NULL),
+(18, 3, NULL, NULL),
+(19, 4, NULL, NULL),
+(20, 4, NULL, NULL);
 
 -- --------------------------------------------------------
 

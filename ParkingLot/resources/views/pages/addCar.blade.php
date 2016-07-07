@@ -14,7 +14,7 @@
 					{{ Form::text('licensePlate') }}
 					<br></br>
 					Car Size:
-					{{ Form::select('size', array(0 => 'Small', 1 => 'Medium', 2 => 'Large', 3 => 'Super-Sized')) }}
+					{{ Form::select('size', array(1 => 'Small', 2 => 'Medium', 3 => 'Large', 4 => 'Super-Sized')) }}
 					<br></br>
 					<a class="button btn btn-info" href="{{ URL::to('/') }}">Back</a>
 					{{ Form::submit('Park', array('class' => 'btn btn-primary')) }}

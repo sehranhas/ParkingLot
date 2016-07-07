@@ -18,7 +18,7 @@ Large: 7 spots (35%)
 
 Super-Sized: 2 spots (10%)
 
-The ParkingSize table is a reference for the integers in the size column of the ParkingSpot table. For example, 0 indicates that the spot is small, and 3 indicates that the spot is super-sized.
+The ParkingSize table is a reference for the integers in the size column of the ParkingSpot table. For example, 1 indicates that the spot is small, and 4 indicates that the spot is super-sized.
 
 When a user parks a car he/she enters a license plate number and car size where the project will update the ParkingSpot table if a row with a null licensePlate and matching size is found. If not the project will notify the user that there are no available spots.
 

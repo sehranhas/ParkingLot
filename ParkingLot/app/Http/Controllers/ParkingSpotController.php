@@ -30,7 +30,7 @@ class ParkingSpotController extends Controller
 		    } 
         else {
 
-		    	$spots = array(0 => 'S', 1 => 'M', 2 => 'L', 3 => 'SS');
+		    	$spots = array(1 => 'S', 2 => 'M', 3 => 'L', 4 => 'SS');
 		        $licensePlate = Input::get('licensePlate');
 		        $size = Input::get('size');
 		        $startTime =  date('Y-m-d H:i:s');
