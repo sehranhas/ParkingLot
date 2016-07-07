@@ -1,27 +1,21 @@
-# Laravel PHP Framework
+# Parking Lot Software
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+The home page is at http://localhost:8000/. Here the user will have two options to choose. The user can either park the car with the given license plate and car size or pick up a car with a given license plate.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Database Information
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+For my database structure I'm using three tables. 
 
-## Official Documentation
+The ParkingSpot table contains the total number of parking spots (for this exercise I set the total number to be 20). In this case there are:
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Small: 2 spots (10%)
 
-## Contributing
+Medium: 9 spots (45%)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Large: 7 spots (35%)
 
-## Security Vulnerabilities
+Super-Sized: 2 spots (10%)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+The ParkingSize table is a reference for the integers in the size column of the ParkingSpot table. For example, 0 indicates that the spot is small, and 3 indicates that the spot is super-sized.
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The Statistics table will be used for analyzing the data for the Parking Lot by entering an attribute (e.g average duration) and signing a value to it.

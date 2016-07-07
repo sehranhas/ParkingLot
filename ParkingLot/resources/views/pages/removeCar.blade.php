@@ -8,16 +8,13 @@
 	</head>
 	<body>
 		<div class="container">
-			<h3>Please fill in the information below to park your car.</h3>
-				{{ Form::open(array('url' => '/addCarResult')) }}
+			<h3>Please enter your license plate number to pick up your car.</h3>
+				{{ Form::open(array('url' => '/removeCarResult')) }}
 					License Plate Number:
 					{{ Form::text('licensePlate') }}
 					<br></br>
-					Car Size:
-					{{ Form::select('size', array(0 => 'Small', 1 => 'Medium', 2 => 'Large', 3 => 'Super-Sized')) }}
-					<br></br>
 					<a class="button btn btn-info" href="{{ URL::to('/') }}">Back</a>
-					{{ Form::submit('Park', array('class' => 'btn btn-primary')) }}
+					{{ Form::submit('Pick up', array('class' => 'btn btn-primary')) }}
 				{{ Form::close() }}
 		</div>
 	</body>

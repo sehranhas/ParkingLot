@@ -16,10 +16,7 @@ class addCarController extends Controller
 {
     public function update()
          {
-         	$now = new DateTime();
-			$now->format('Y-m-d H:i:s');   
-            
-
+         	   
 
             $validation = Validator::make(Input::all(), 
 		        array(
@@ -35,14 +32,26 @@ class addCarController extends Controller
 
 		        $licensePlate = Input::get('licensePlate');
 		        $size = Input::get('size');
-		        $startTime =  $now->getTimestamp(); 
+		        $startTime =  date('Y-m-d H:i:s');
 
-
-		        DB::table('ParkingSpot')->where('licensePlate', NULL)->update(array(
-		            'licensePlate' => $licensePlate,
-		            'startTime' => $startTime
-		        ));
-
+		        $spot_ids =  DB::table('ParkingSpot')
+                     ->select('id')
+                     ->whereNull('licensePlate')
+                     ->where('size', $size)
+                     ->get();
+                    
+                if($spot_ids != []){
+                	$id = (object) $spot_ids[0];
+                	
+                	DB::table('ParkingSpot')->where('id', $id->id)->update(array(
+			            'licensePlate' => $licensePlate,
+			            'startTime' => $startTime
+		        	));
+                }
+                else {
+                	echo "Sorry, no spots available";
+                }
+               
     		}
 
 

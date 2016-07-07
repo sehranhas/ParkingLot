@@ -19,6 +19,9 @@ Route::get('/add', function () {
     return view('pages.addCar');
 });
 
-Route::post('/success', array('uses'=>'addCarController@update'));
+Route::get('/remove', function () {
+    return view('pages.removeCar');
+});
 
-Route::resource('parkCar', 'ParkingSpotController');
+Route::post('/addCarResult', array('uses'=>'ParkingSpotController@update'));
+Route::post('/removeCarResult', array('uses'=>'ParkingSpotController@destroy'));
