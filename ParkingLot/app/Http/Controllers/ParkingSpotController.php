@@ -27,7 +27,8 @@ class ParkingSpotController extends Controller
 
 		    if($validation->fails()) {
 		        return Redirect::back()->withInput()->withErrors($validation->messages());
-		    } else {
+		    } 
+        else {
 
 		    	$spots = array(0 => 'S', 1 => 'M', 2 => 'L', 3 => 'SS');
 		        $licensePlate = Input::get('licensePlate');
@@ -69,7 +70,8 @@ class ParkingSpotController extends Controller
 		);
 		if($validation->fails()) {
 		        return Redirect::back()->withInput()->withErrors($validation->messages());
-		    } else {
+		    } 
+    else {
 		    $licensePlate = Input::get('licensePlate');
 
 		    $now = new DateTime();
@@ -79,14 +81,14 @@ class ParkingSpotController extends Controller
                      ->where('licensePlate', $licensePlate)
                      ->get();
             
-            if($data != []){
-            	$data = (object) $data[0];
-            	$id = $data->id;
-            	$startTime = $data->startTime;
+        if($data != []){
+            $data = (object) $data[0];
+            $id = $data->id;
+            $startTime = $data->startTime;
             	
-            	$startTime = new DateTime($startTime);
-				$diff = $startTime->diff($now);
-				$diff_seconds = (int) $diff->format("%s");
+            $startTime = new DateTime($startTime);
+				    $diff = $startTime->diff($now);
+				    $diff_seconds = (int) $diff->format("%s");
        			$diff_mins = (int) $diff->format("%i");
        			$diff_hours = (int) $diff->format("%h");
        			$diff_days = (int) $diff->format("%d");
@@ -111,6 +113,6 @@ class ParkingSpotController extends Controller
             else {
             	return View::make('pages.noCar');
             }
-		}
+		  }
     } 
 }
