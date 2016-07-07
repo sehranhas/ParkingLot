@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
+
+Route::get('/add', function () {
+    return view('pages.addCar');
+});
+
+Route::post('/success', array('uses'=>'addCarController@update'));
+
+Route::resource('parkCar', 'ParkingSpotController');
